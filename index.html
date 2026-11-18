@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2D Studio Portfolio</title>
+  <meta name="description" content="Modern 2D Studio portfolio website — easy to edit and customize anytime." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Outfit:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="#top" class="brand" aria-label="Home">
+        <span class="brand__badge" id="nav-brand-badge">KM.</span>
+        <span id="nav-brand-name">Kabindra</span>
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle theme">
+          <span id="theme-icon">🌙</span>
+        </button>
+        <button class="btn-2d btn-2d--sm btn-2d--secondary" id="open-editor-nav" type="button">
+          ✎ Edit Site
+        </button>
+        <button class="icon-btn mobile-menu-btn" id="mobile-menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <div class="availability-pill">
+            <span class="availability-dot" aria-hidden="true"></span>
+            <span id="hero-availability">Available for freelance &amp; full-time</span>
+          </div>
+
+          <h1 class="hero__title">
+            Hi, I'm <span class="hero__highlight" id="hero-name">Kabindra</span>.
+          </h1>
+
+          <p class="hero__role" id="hero-role">Creative Developer &amp; 2D Designer</p>
+          <p class="hero__tagline" id="hero-tagline">
+            I craft playful, high-performance 2D web experiences, interactive interfaces, and clean full-stack products.
+          </p>
+
+          <div class="hero__cta">
+            <a href="#projects" class="btn-2d btn-2d--primary">View Projects ↓</a>
+            <a href="#contact" class="btn-2d">Let's Talk</a>
+            <a href="#" class="btn-2d btn-2d--secondary" id="hero-resume-btn" target="_blank" rel="noopener">
+              Resume ↗
+            </a>
+          </div>
+
+          <div class="hero__socials" id="hero-socials"></div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="avatar-frame">
+            <div class="avatar-art" id="avatar-art"></div>
+            <div class="avatar-caption">
+              <span id="hero-location">📍 Kathmandu, Nepal</span>
+              <span>2D / WEB</span>
+            </div>
+          </div>
+          <p class="canvas-hint">✨ Tip: Move or click the background shapes!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT & STATS -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">01 / About</span>
+            <h2 class="section-title">About Me</h2>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <article class="card-2d about-copy">
+            <h3 id="about-heading">Turning ideas into crisp 2D interactive reality.</h3>
+            <div id="about-paragraphs"></div>
+          </article>
+
+          <div class="stats-grid" id="about-stats"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services" style="padding-top: 0;">
+      <div class="container">
+        <div class="services-grid" id="services-grid"></div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">02 / Toolkit</span>
+            <h2 class="section-title">Skills &amp; Stack</h2>
+          </div>
+          <div class="filter-bar" id="skill-filters" role="group" aria-label="Filter skills by category"></div>
+        </div>
+
+        <div class="skills-grid" id="skills-grid"></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">03 / Selected Work</span>
+            <h2 class="section-title">Featured Projects</h2>
+          </div>
+          <div class="filter-bar" id="project-filters" role="group" aria-label="Filter projects by category"></div>
+        </div>
+
+        <div class="projects-grid" id="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">04 / Journey</span>
+            <h2 class="section-title">Experience</h2>
+          </div>
+        </div>
+
+        <div class="timeline" id="experience-timeline"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">05 / Connect</span>
+            <h2 class="section-title">Get In Touch</h2>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="card-2d contact-info">
+            <h3>Have a project in mind?</h3>
+            <p>
+              I'm always open to discussing new projects, creative 2D web ideas, or opportunities to collaborate.
+            </p>
+
+            <div class="contact-meta">
+              <div class="contact-meta-row">
+                <span id="contact-email-text">hello@example.com</span>
+                <button class="btn-2d btn-2d--sm" id="copy-email-btn" type="button">Copy</button>
+              </div>
+              <div class="contact-meta-row">
+                <span id="contact-location-text">Kathmandu, Nepal</span>
+                <span>UTC+5:45</span>
+              </div>
+            </div>
+
+            <div class="hero__socials" id="contact-socials"></div>
+          </div>
+
+          <form class="card-2d contact-form" id="contact-form" novalidate>
+            <div class="field">
+              <label for="c-name">Your Name</label>
+              <input id="c-name" name="name" type="text" placeholder="Jane Doe" required />
+            </div>
+            <div class="field">
+              <label for="c-email">Email Address</label>
+              <input id="c-email" name="email" type="email" placeholder="jane@example.com" required />
+            </div>
+            <div class="field">
+              <label for="c-message">Message</label>
+              <textarea id="c-message" name="message" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button class="btn-2d btn-2d--primary" type="submit">Send Message →</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p id="footer-copy">© 2026 Kabindra Maharjan. Built with crisp 2D craft.</p>
+      <a href="#top" class="btn-2d btn-2d--sm">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- PROJECT DETAIL MODAL -->
+  <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-cover" id="dialog-cover">
+      <button class="icon-btn dialog-close" id="dialog-close-btn" type="button" aria-label="Close modal">✕</button>
+    </div>
+    <div class="dialog-body">
+      <div>
+        <span class="project-card__cat" id="dialog-cat"></span>
+        <h3 id="dialog-title" style="font-size: 1.65rem;"></h3>
+      </div>
+      <p id="dialog-desc" style="color: var(--text-muted);"></p>
+      <div class="tag-list" id="dialog-tags"></div>
+      <div class="dialog-actions">
+        <a id="dialog-live" class="btn-2d btn-2d--primary" href="#" target="_blank" rel="noopener">Live Demo ↗</a>
+        <a id="dialog-repo" class="btn-2d" href="#" target="_blank" rel="noopener">Source Code ↗</a>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- FLOATING EDIT BUTTON -->
+  <button class="btn-2d btn-2d--secondary editor-fab" id="open-editor-fab" type="button" title="Edit portfolio content">
+    ✎ Edit Portfolio
+  </button>
+
+  <!-- LIVE PORTFOLIO EDITOR DRAWER -->
+  <aside class="editor-drawer" id="editor-drawer" aria-label="Portfolio Live Editor" aria-hidden="true">
+    <div class="editor-drawer__header">
+      <strong>✎ Live Portfolio Editor</strong>
+      <button class="icon-btn" id="close-editor-btn" type="button" aria-label="Close editor">✕</button>
+    </div>
+
+    <div class="editor-drawer__tabs" role="tablist">
+      <button class="editor-tab is-active" data-tab="profile" type="button">Profile &amp; Theme</button>
+      <button class="editor-tab" data-tab="about" type="button">About</button>
+      <button class="editor-tab" data-tab="skills" type="button">Skills</button>
+      <button class="editor-tab" data-tab="projects" type="button">Projects</button>
+      <button class="editor-tab" data-tab="experience" type="button">Experience</button>
+    </div>
+
+    <div class="editor-drawer__body" id="editor-body"></div>
+
+    <div class="editor-drawer__footer">
+      <button class="btn-2d btn-2d--sm" id="editor-reset-btn" type="button">↺ Reset Default</button>
+      <button class="btn-2d btn-2d--sm btn-2d--primary" id="editor-export-btn" type="button">⬇ Download config.js</button>
+    </div>
+  </aside>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
