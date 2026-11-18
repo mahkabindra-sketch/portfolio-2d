@@ -92,7 +92,7 @@ window.PORTFOLIO_CONFIG = {
       category: "Design",
       year: "2026",
       color: "#E87722",
-      image: "",
+      image: "project-markq.jpg",
       summary:
         "Interior-design educational posters for an Australian home builder — lighting rules, luxury details and more.",
       description:
@@ -107,7 +107,7 @@ window.PORTFOLIO_CONFIG = {
       category: "Design",
       year: "2026",
       color: "#0EA5E9",
-      image: "",
+      image: "project-email.jpg",
       summary:
         "Five ready-to-use email templates for small brands — honey, coffee, skincare, fitness and fashion.",
       description:
@@ -122,7 +122,7 @@ window.PORTFOLIO_CONFIG = {
       category: "Design",
       year: "2026",
       color: "#10B981",
-      image: "",
+      image: "project-festival.jpg",
       summary:
         "Event poster with full sponsor branding for a Nepali festival in Sydney, Australia.",
       description:
@@ -137,7 +137,7 @@ window.PORTFOLIO_CONFIG = {
       category: "Video",
       year: "2026",
       color: "#EC4899",
-      image: "",
+      image: "project-news.jpg",
       summary:
         "A daily Nepali news video series for TikTok, YouTube Shorts and Facebook Reels.",
       description:
