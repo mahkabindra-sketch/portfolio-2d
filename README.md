@@ -1,6 +1,6 @@
 # 2D Full Portfolio Website
 
-A complete, responsive, interactive 2D portfolio website with zero build tools required.
+Portfolio of Kabindra Maharjan — Graphic Designer & Video Editor, Kathmandu, Nepal.
 
 ## How to Open
 - Double-click `index.html` to open it directly in your browser, **or**
